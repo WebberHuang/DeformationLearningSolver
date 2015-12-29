@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>about_dialog</class>
+ <widget class="QDialog" name="about_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>190</width>
+    <height>131</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>About</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QLabel" name="title_lbl">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Deformation Learning Solver</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="detailInfo_frame">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="author_lbl">
+            <property name="text">
+             <string>Author:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="contact_lbl">
+            <property name="text">
+             <string>Contact:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="website_lbl">
+            <property name="text">
+             <string>Website:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="version_lbl">
+            <property name="text">
+             <string>Version:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="authorVal_lbl">
+            <property name="text">
+             <string>Webber Huang</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="contactVal_lbl">
+            <property name="text">
+             <string>xracz.fx@gmail.com</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="websiteVal_lbl">
+            <property name="text">
+             <string>http://riggingtd.com</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="versionVal_lbl">
+            <property name="text">
+             <string>1.5.3</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>272</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="numBones_lbl">
+          <property name="text">
+           <string>Num of Bones:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="numBones_spn">
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="wrapping">
+           <bool>false</bool>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="maxInfs_lbl">
+          <property name="text">
+           <string>Max Infs:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QSpinBox" name="maxInfs_spn">
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="epsilon_lbl">
+          <property name="text">
+           <string>Epsilon:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="epsilon_spn">
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="maxIters_lbl">
+          <property name="text">
+           <string>Max Iters:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QSpinBox" name="maxIters_spn">
+          <property name="maximumSize">
+           <size>
+            <width>48</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maximum">
+           <number>999999999</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="break1_line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="targetMesh_frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="targetMesh_lbl">
+          <property name="text">
+           <string>Target Mesh:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="targetMesh_edit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadTargetMesh_btn">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;--</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="alternativeUpdate_chk">
+        <property name="text">
+         <string>Alternative Update</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="break2_line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="timeRangeOptions_frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="timeRange_lbl">
+          <property name="text">
+           <string>Time Range:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="startEnd_lbl">
+          <property name="text">
+           <string>Start/End:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QRadioButton" name="timeSlider_rbtn">
+            <property name="text">
+             <string>Time Slider</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="startEnd_rbtn">
+            <property name="text">
+             <string>Start/End</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLineEdit" name="startTime_edit">
+            <property name="text">
+             <string>0.0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="endTime_edit">
+            <property name="text">
+             <string>0.0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QPushButton" name="solve_btn">
+       <property name="text">
+        <string>Solve</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="measure_btn">
+       <property name="text">
+        <string>Measure</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <zorder>timeRangeOptions_frame</zorder>
+  <zorder>break2_line</zorder>
+  <zorder>targetMesh_frame</zorder>
+  <zorder>break1_line</zorder>
+  <zorder>frame</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

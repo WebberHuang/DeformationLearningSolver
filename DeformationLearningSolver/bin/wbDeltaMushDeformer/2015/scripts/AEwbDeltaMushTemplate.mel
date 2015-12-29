@@ -1,0 +1,21 @@
+global proc AEwbDeltaMushTemplate( string $nodeName )
+{
+    editorTemplate -beginScrollLayout;	
+	
+		// Add Delta Mush Attributes section
+		editorTemplate -beginLayout "Delta Mush Attributes" -collapse 0;	    
+			editorTemplate -addControl "smoothingIterations";
+			editorTemplate -addControl "smoothingAlgorithm";
+			editorTemplate -addControl "smoothingStep";
+			editorTemplate -addControl "pinBorderVertices";
+			editorTemplate -addControl "displacement";
+			editorTemplate -addControl "scale";
+			editorTemplate -addControl "tangentMode";	
+		editorTemplate -endLayout;
+	
+		AEweightGeometryFilterTemplate $nodeName;
+	
+	editorTemplate -addExtraControls;	
+	editorTemplate -suppress "cache";	
+	editorTemplate -endScrollLayout;
+}

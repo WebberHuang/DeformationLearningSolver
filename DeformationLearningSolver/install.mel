@@ -1,0 +1,85 @@
+/* 
+#----------------------------------------------------------------------
+#    Author:      Webber Huang
+#    Contact:     xracz.fx@gmail.com
+#    Homepage:    http://riggingtd.com
+#----------------------------------------------------------------------
+*/
+
+
+global string $gShelfTopLevel;
+string $currentShelf = `tabLayout -query -selectTab $gShelfTopLevel`;
+setParent $currentShelf;
+
+string $scriptLocation=`scriptLocation`;
+string $scriptName="Deformation Learning Solver";
+string $command="import DLS\nDLS.launch()";
+
+// Setup module
+python("import os");
+python("home = os.path.expanduser(\"~\")");
+string $mayaModDir = python("home+\"/maya/modules/\"");
+if (`about -os` == "mac") $mayaModDir = python("home+\"/Library/Preferences/Autodesk/maya/modules/\"");
+python("try:\n\tmodDir=os.path.relpath(\""+$scriptLocation+"\",\""+$mayaModDir+"\").replace('\\\\', '/')\nexcept:\n\tmodDir=\"\"");
+string $modDir = python("modDir");
+if ($modDir == "") $modDir = `substring $scriptLocation 1 (size($scriptLocation)-1)`;
+
+string $modName = "DeformationLearningSolver";
+string $modFileName = $modName+".mod";
+string $modFile = $scriptLocation + "modules/" + $modFileName;
+string $newModFile = $mayaModDir + $modFileName ;
+string $toBeReplacedStr = "REPLACE_TO_YOUR_PATH";
+
+int $copySuccess = `sysFile -cp $newModFile $modFile`;
+if (!$copySuccess) sysFile -md $mayaModDir;
+
+$inFileId=`fopen $modFile "r"`;
+$outFileId=`fopen $newModFile "w"`;
+string $nextLine = `fgetline $inFileId`;
+while ( size( $nextLine ) > 0 ) {
+	$nextLine = `substitute $toBeReplacedStr $nextLine $modDir`;		
+	fprint($outFileId, $nextLine);
+    $nextLine = `fgetline $inFileId`;
+}
+fclose $inFileId;
+fclose $outFileId;
+
+// load script path for current session
+loadModule -a;
+string $modScriptDir = ($scriptLocation+"scripts");
+print ($modScriptDir +"\n");
+python ("import sys") ;
+string $pyPaths[] = python ("sys.path") ;
+if ( stringArrayCount ($modScriptDir, $pyPaths) == 0 )
+    python ("sys.path.insert(0, '" + $modScriptDir + "')") ;
+
+//string $icon=$scriptLocation+"icons/deformationLearningIcon.png";
+
+// Install button to current shelf
+shelfButton
+    -command $command
+    -annotation $scriptName
+    -label $scriptName
+    //-image $icon
+    -imageOverlayLabel $scriptName
+    -image "pythonFamily.png" 
+    -style "iconOnly"
+    -sourceType "python"
+;
+
+print ("// "+$scriptName+" has been added to current shelf.\n");
+
+// Helper functions for locating script's location
+global proc scriptLocator (){}
+
+global proc string scriptLocation ()
+{
+    string $whatIs=`whatIs scriptLocator`;
+    string $fullPath=`substring $whatIs 25 999`;
+    string $buffer[];
+    int $numTok=`tokenize $fullPath "/" $buffer`;
+    int $numLetters=size($fullPath);
+    int $numLettersLastFolder=size($buffer[$numTok-1]);
+    string $scriptLocation=`substring $fullPath 1 ($numLetters-$numLettersLastFolder)`;
+    return $scriptLocation;
+}

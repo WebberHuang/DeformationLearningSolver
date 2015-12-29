@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>175</width>
+    <height>165</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="applyRigidSkinWeights_btn">
+     <property name="text">
+      <string>Apply Rigid Skin Weights</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="applyDeltaMushDeformer_btn">
+     <property name="text">
+      <string>Apply Delta Mush Deformer</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="transSkinWeights_btn">
+     <property name="text">
+      <string>Transfer Skin Weights</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="transBlendshapAttrs_btn">
+     <property name="text">
+      <string>Transfer Blendshape Attributes</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>255</width>
+    <height>243</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QFrame" name="transformOptions_frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QLabel" name="min_lbl">
+          <property name="text">
+           <string>Min</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="max_lbl">
+          <property name="text">
+           <string>Max</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="translate_chk">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Translate:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="translateMin_edit">
+          <property name="text">
+           <string>-1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="translateMax_edit">
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="translateOpt_btn">
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="rotate_chk">
+          <property name="text">
+           <string>Rotate:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="rotateMin_edit">
+          <property name="text">
+           <string>-90.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="rotateMax_edit">
+          <property name="text">
+           <string>90.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="rotateOpt_btn">
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="scale_chk">
+          <property name="text">
+           <string>Scale:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="scaleMin_edit">
+          <property name="text">
+           <string>-1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="scaleMax_edit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="scaleOpt_btn">
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="break1_line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="blendshapeOptions_frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="blendshape_chk">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Blend Shape:</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="blendshape_edit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadBlendshape_btn">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;--</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="break2_line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="customAttrsOptions_frame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QCheckBox" name="customAttrs_chk">
+          <property name="maximumSize">
+           <size>
+            <width>14</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="openCustomAttrsEditor_btn">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Custom Attributes</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="run_btn">
+       <property name="text">
+        <string>Run</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
