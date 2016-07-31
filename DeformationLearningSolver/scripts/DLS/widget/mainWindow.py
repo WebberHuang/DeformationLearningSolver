@@ -3,8 +3,15 @@ __contact__ = "xracz.fx@gmail.com"
 __website__ = "http://riggingtd.com"
 
 import os
-from PySide.QtCore import *
-from PySide.QtGui import *
+try:
+    from PySide import QtGui, QtCore
+    from PySide.QtGui import *
+    from PySide.QtCore import *
+except ImportError:
+    from PySide2 import QtGui, QtCore, QtWidgets
+    from PySide2.QtGui import *
+    from PySide2.QtCore import *
+    from PySide2.QtWidgets import *
 
 from DLS.widget import optionWindow
 from DLS.widget import aboutDialog

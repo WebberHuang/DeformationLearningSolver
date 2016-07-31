@@ -1,7 +1,7 @@
 __author__ = "Webber Huang"
 __contact__ = "xracz.fx@gmail.com"
 __website__ = "http://riggingtd.com"
-__buildVersionID__      = '1.5.3'
+__buildVersionID__      = '1.5.4'
 __ENVIRONMENT_NAME__ = "DEFORMATION_LEARNING_SOLVER"
 
 
@@ -10,9 +10,23 @@ import os
 import maya.cmds as cmds
 import maya.mel as mel
 import maya.OpenMayaUI as omui
-from PySide.QtCore import * 
-from PySide.QtGui import *
-from shiboken import wrapInstance
+
+PYSIDE_VERSION = '-1'
+try:
+    import PySide
+    PYSIDE_VERSION = PySide.__version__
+    from PySide import QtGui, QtCore
+    from PySide.QtGui import *
+    from PySide.QtCore import *
+    from shiboken import wrapInstance
+except ImportError:
+    import PySide2
+    PYSIDE_VERSION = PySide2.__version__
+    from PySide2 import QtGui, QtCore, QtWidgets
+    from PySide2.QtGui import *
+    from PySide2.QtCore import *
+    from PySide2.QtWidgets import *
+    from shiboken2 import wrapInstance
 
 import logging
 logging.basicConfig()
@@ -72,9 +86,12 @@ def loadSSDSolverPlugin():
         pluginName = '%s.so' % (SSD_SOLVER_PLUGIN_BASE_NAME)
 
     if not cmds.pluginInfo(pluginName, q=True, l=True ):
-        cmds.loadPlugin(pluginName)
-        pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
-        log.info('Plug-in: %s v%s loaded success!' % (pluginName, pluginVers))
+        try:
+            cmds.loadPlugin(pluginName)
+            pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
+            log.info('Plug-in: %s v%s loaded success!' % (pluginName, pluginVers))
+        except: 
+            log.info('Plug-in: %s, was not found on MAYA_PLUG_IN_PATH.' % (pluginName))
     else:
         pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
         log.info('Plug-in: %s v%s has been loaded!' % (pluginName, pluginVers))
@@ -92,9 +109,12 @@ def loadDeltaMushPlugin():
         pluginName = '%s.so' % (DELTA_MUSH_PLUGIN_BASE_NAME)
 
     if not cmds.pluginInfo(pluginName, q=True, l=True ):
-        cmds.loadPlugin(pluginName)
-        pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
-        log.info('Plug-in: %s v%s loaded success!' % (pluginName, pluginVers))
+        try:
+            cmds.loadPlugin(pluginName)
+            pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
+            log.info('Plug-in: %s v%s loaded success!' % (pluginName, pluginVers))
+        except:
+            log.info('Plug-in: %s, was not found on MAYA_PLUG_IN_PATH.' % (pluginName))
     else:
         pluginVers = cmds.pluginInfo(pluginName, q=1, v=1)
         log.info('Plug-in: %s v%s has been loaded!' % (pluginName, pluginVers))

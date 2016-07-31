@@ -22,7 +22,7 @@ The solver has been compiled success on these platforms:
 
 * Windows 7 64bit, Visual Studio 2013
 * CentOS 7, GCC 4.8.3 with -std=c++11
-* OS X 10.10, Xcode 6.1 with -std=gnu++0x
+* OS X 10.10, Xcode 6.1 with -std=c++11
 
 ## Install:
 * This tool is module based, you can place "DeformationLearningSolver" folder to any where.
@@ -78,9 +78,11 @@ Everything at this stage is uncertain, it would be the first and the last versio
 * For anyone who wants to convert delta mush to skinning, this isn't the best solution for it, since the computation is too heavy, please turn to tools like: [Semi Auto Skinning R&D
 ](http://robotsquids.blogspot.com/2014/09/semi-auto-skinning-r.html), [Skonverter](https://github.com/coxevan/skonverter).
 
-* Clone or not clone? For those people think I stole the idea from Skinning Converter by Hans Godard, you're free to comment at your pleasure :)
-
 ## History:
+#### 2017-07-31: v1.5.4 by Webber Huang
+- UPDATE: wbDeltaMush v1.8.1, fixed crash issue when mesh contains wrong UV
+- Compile against Maya 2017
+
 #### 2015-11-21: v1.5.3 by Webber Huang
 - UPDATE: wbDeltaMush v1.8.0, better performance and minor bugs fixed
 

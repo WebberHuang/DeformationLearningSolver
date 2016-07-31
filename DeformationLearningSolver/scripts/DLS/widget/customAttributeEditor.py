@@ -4,8 +4,15 @@ __website__ = "http://riggingtd.com"
 
 import os
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+try:
+    from PySide import QtGui, QtCore
+    from PySide.QtGui import *
+    from PySide.QtCore import *
+except ImportError:
+    from PySide2 import QtGui, QtCore, QtWidgets
+    from PySide2.QtGui import *
+    from PySide2.QtCore import *
+    from PySide2.QtWidgets import *
 
 import maya.cmds as cmds
 import maya.OpenMaya as om
@@ -13,6 +20,7 @@ import maya.OpenMaya as om
 
 from DLS.widget import baseOptionWindow
 from DLS.widget import utils
+from DLS.startup import setup
 
 
 uifile = os.path.join(utils.SCRIPT_DIRECTORY, "ui/customAttributeEditor.ui")
@@ -58,8 +66,11 @@ class CustomAttributeEditor(baseOptionWindow.BaseOptionWindow):
         self.table.setAlternatingRowColors(True)
         self.table.setColumnWidth(1, 56)
         self.table.setColumnWidth(2, 56)
-        self.table.horizontalHeader().setResizeMode(0, QHeaderView.Stretch)
         
+        if setup.PYSIDE_VERSION < 2.0:
+            self.table.horizontalHeader().setResizeMode(0, QHeaderView.Stretch)
+        else:
+            self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
         
         # Fill table
         i = 0
