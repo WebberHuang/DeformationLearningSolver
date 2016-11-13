@@ -1,7 +1,7 @@
 __author__ = "Webber Huang"
 __contact__ = "xracz.fx@gmail.com"
 __website__ = "http://riggingtd.com"
-__buildVersionID__      = '1.5.4'
+__buildVersionID__      = '1.5.5'
 __ENVIRONMENT_NAME__ = "DEFORMATION_LEARNING_SOLVER"
 
 

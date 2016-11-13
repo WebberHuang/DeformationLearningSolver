@@ -79,6 +79,9 @@ Everything at this stage is uncertain, it would be the first and the last versio
 ](http://robotsquids.blogspot.com/2014/09/semi-auto-skinning-r.html), [Skonverter](https://github.com/coxevan/skonverter).
 
 ## History:
+#### 2017-11-13: v1.5.5 by Webber Huang
+- FIXED: unable to support arbitrary FPS
+
 #### 2017-07-31: v1.5.4 by Webber Huang
 - UPDATE: wbDeltaMush v1.8.1, fixed crash issue when mesh contains wrong UV
 - Compile against Maya 2017
