@@ -1,10 +1,12 @@
 # Deformation Learning Solver for Autodesk Maya
 
+**This project has been DEPRECATED and is no longer being supported.** This is just my personal experiment project that I never expected people taking it seriously, companies use this tool will end up implementing their own version, and I'm not allowed to share or sell the source code in any way, sorry about that.
+
+------------------------------------------
+
 Deformation Learning Solver is based on Smooth Skinning Decomposition with Rigid Bones which was an automated algorithm to extract the linear blend skinning (LBS) from a set of example poses, and made to convert any deformation approximation to joints and it's skinning-based. This allows there to be a savings in computing resources and a smaller data footprint.
 
-This tool haven't be verified in real production yet, since this's just a personal research project to learn SSDR and skinning technique in deep, I don't have any plan for commercial release so far. 
-
-Please feel free to test it at your own risk.
+This tool haven't be verified in real production yet, since this's just a personal research project to learn SSDR and skinning technique in deep, please feel free to test it at your own risk.
 
 ## Contact:
 * Author: [Webber Huang](https://uk.linkedin.com/in/webber-huang-aab076100)
@@ -53,7 +55,7 @@ These plug-ins are included in this tool
 * wbDeltaMushDeformer: a deformer based on [Delta Mush: Smoothing Deformations While Preserving Detail](http://dl.acm.org/citation.cfm?id=2633376), it's also a component in AdvanceSkeleton since 5.0.
 
 ## Usage:
-- There's no document for this tool yet, the only instruction you can find are those two Demos mentioned above.
+- There's no document for this tool, the only instruction you can find are those two Demos mentioned above.
 
 - This tool can either solve the best weight map with pre-define joints by user or extract specify number of joints, animations and weight map from a mesh sequences, the first case is extremely fast since it only need to solve the weight map with one iteration.
 
@@ -67,16 +69,6 @@ Here are key parameters you should understand:
 - **Epsilon**: the computation will finish before it reaches the max iteration if the subtraction between Current Total Error and Previous Total Error is less than epsilon.
 - **Max Iters**: in general, more iterations can result in more accurate approximation, but I found 10 is sufficient in most cases.
 - **Target Mesh**: input animated mesh here will enable reverse enginnering feature as showed in [Demo v1.5](https://vimeo.com/138048608).
-
-## Technical Support:
-There’s no technical support for free users.
-
-## Further Development:
-Everything at this stage is uncertain, it would be the first and the last version I could share.
-
-## Notes:
-* For anyone who wants to convert delta mush to skinning, this isn't the best solution for it, since the computation is too heavy, please turn to tools like: [Semi Auto Skinning R&D
-](http://robotsquids.blogspot.com/2014/09/semi-auto-skinning-r.html), [Skonverter](https://github.com/coxevan/skonverter).
 
 ## History:
 #### 2017-11-13: v1.5.5 by Webber Huang
@@ -103,4 +95,3 @@ Everything at this stage is uncertain, it would be the first and the last versio
 
 ## References:
 1. B. H. Le and Z. Deng, “Smooth Skinning Decomposition with Rigid Bones,” ACM Trans. Graph., vol. 31, no. 6, pp. 199:1–199:10, Nov. 2012.
-2. Hans Godard, [Skinning Converter](https://vimeo.com/123883474)
