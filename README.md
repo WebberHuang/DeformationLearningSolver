@@ -8,6 +8,8 @@ Deformation Learning Solver is based on Smooth Skinning Decomposition with Rigid
 
 This tool haven't be verified in real production yet, since this's just a personal research project to learn SSDR and skinning technique in deep, please feel free to test it at your own risk.
 
+## License: BSD 3-Clause
+
 ## Contact:
 * Author: [Webber Huang](https://uk.linkedin.com/in/webber-huang-aab076100)
 * Email: <xracz.fx@gmail.com>
