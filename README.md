@@ -83,7 +83,7 @@ Here are key parameters you should understand:
 #### 2015-11-21: v1.5.3 by Webber Huang
 - UPDATE: wbDeltaMush v1.8.0, better performance and minor bugs fixed
 
-#### 2015-09-02: [v1.5.0](http://riggingtd.com/2015/09/deformation-learning-solver-v1-5/) by Webber Huang
+#### 2015-09-02: v1.5.0 by Webber Huang
 - NEW: wbDeltaMush is included
 - NEW: reverse bone animation from animated sequence
 - NEW: alternative update with existing bones and weights
@@ -91,7 +91,7 @@ Here are key parameters you should understand:
 - UPDATE: parallelize bone transformation updating function, 30~40% faster than before
 - minor bugs fixed
 
-#### 2015-06-18: [v1.0.0](http://riggingtd.com/2015/06/deformation-learning-solver/) by Webber Huang
+#### 2015-06-18: v1.0.0 by Webber Huang
 - Initial release
 
 
