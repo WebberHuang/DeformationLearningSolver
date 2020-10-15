@@ -2,6 +2,10 @@
 
 **This project has been DEPRECATED and is no longer being supported.** This is just my personal experiment project that I never expected people taking it seriously, companies use this tool will end up implementing their own version, and I'm not allowed to share or sell the source code in any way, sorry about that.
 
+Please find the alternative solution from **EA's [Dem Bones](https://github.com/electronicarts/dem-bones)**, it's reliable in terms of performance and accuracy, I highly recommend everyone adapt this implementaion to your own project. 
+
+Any query regarding to DLS won't get replied, thanks for your understanding.
+
 ------------------------------------------
 
 Deformation Learning Solver is based on Smooth Skinning Decomposition with Rigid Bones which was an automated algorithm to extract the linear blend skinning (LBS) from a set of example poses, and made to convert any deformation approximation to joints and it's skinning-based. This allows there to be a savings in computing resources and a smaller data footprint.
@@ -12,7 +16,6 @@ This tool haven't be verified in real production yet, since this's just a person
 
 ## Contact:
 * Author: [Webber Huang](https://uk.linkedin.com/in/webber-huang-aab076100)
-* Email: <xracz.fx@gmail.com>
 * Project: [https://github.com/WebberHuang/DeformationLearningSolver](https://github.com/WebberHuang/DeformationLearningSolver)
 
 ## Demo: 
